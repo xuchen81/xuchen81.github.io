@@ -89,7 +89,7 @@ function removeMatchNodes(){
 		li1.appendChild(a1);
 		var li2 = document.createElement("li");
 		var a2 = document.createElement("a");
-		a2.setAttribute("href","/memory-cards");
+		a2.setAttribute("href","/memory_cards");
 		a2.innerHTML = "Play Again";
 		li2.appendChild(a2);
 		ul.appendChild(li1);
