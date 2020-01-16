@@ -43,6 +43,18 @@ $(function() {
     d3.select("#circle_3_4").attr("class", "black").style("fill", "black").attr("opacity", 1);
     d3.select("#circle_4_3").attr("class", "black").style("fill", "black").attr("opacity", 1);
     d3.select("#circle_4_4").attr("class", "white").style("fill", "white").attr("opacity", 1);
+    svg.append("circle").attr("cx", squareSize * 2 + 20)
+        .attr("cy", squareSize * 2 + 20)
+        .attr("r", 5);
+    svg.append("circle").attr("cx", squareSize * 6 + 20)
+        .attr("cy", squareSize * 2 + 20)
+        .attr("r", 5);
+    svg.append("circle").attr("cx", squareSize * 2 + 20)
+        .attr("cy", squareSize * 6 + 20)
+        .attr("r", 5);
+    svg.append("circle").attr("cx", squareSize * 6 + 20)
+        .attr("cy", squareSize * 6 + 20)
+        .attr("r", 5);
 
     var modeBtnSize = 60;
     var modeSwitchBtnSpace = 50;
