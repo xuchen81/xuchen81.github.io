@@ -274,10 +274,10 @@ $(function() {
     };
 
     var checkGo = function(mode) {
-        for (var i = 0; i < n; i ++) {
-            for (var j = 0; j < n; j ++) {
+        for (var i = 0; i < n; i++) {
+            for (var j = 0; j < n; j++) {
                 if (d3.select("#circle_" + i + "_" + j).attr("opacity") === "1") {
-                    break;
+                    continue;
                 }
                 var reverso = getReverso(i, j, mode);
                 if (reverso.length > 0) {
@@ -286,7 +286,7 @@ $(function() {
             }
         }
         return false;
-    }
+    };
 
     d3.selectAll("rect[class='cell'], circle").on('click', function() {
         var cellPosn = d3.select(this).attr("posn");
@@ -300,9 +300,9 @@ $(function() {
 
         if (reverso.length === 0) {
             if (mode === "black") {
-                alert("不可以走这里, 你需要翻掉至少一颗白棋");
+                alert("不可以走这里, 你需要至少翻掉一颗白棋");
             } else {
-                alert("不可以走这里, 你需要翻掉至少一颗黑棋");
+                alert("不可以走这里, 你需要至少翻掉一颗黑棋");
             }
             return;
         }
@@ -331,14 +331,14 @@ $(function() {
             if (checkGo("white")) {
                 selectWhite();
             } else if (checkGo("black")) {
-                alert("白棋无处可走，棋权依然归黑色。")
+                alert("白棋无处可走，棋权依然归黑色。");
                 selectBlack();
             }
         } else {
             if (checkGo("black")) {
                 selectBlack();
             } else if (checkGo("white")) {
-                alert("黑棋无处可走，棋权依然归白色。")
+                alert("黑棋无处可走，棋权依然归白色。");
                 selectWhite();
             }
         }
