@@ -300,9 +300,9 @@ $(function() {
 
         if (reverso.length === 0) {
             if (mode === "black") {
-                alert("不可以走这里, 你需要至少翻掉至少一颗白棋");
+                alert("不可以走这里, 你需要翻掉至少一颗白棋");
             } else {
-                alert("不可以走这里, 你需要至少翻掉至少一颗黑棋");
+                alert("不可以走这里, 你需要翻掉至少一颗黑棋");
             }
             return;
         }
