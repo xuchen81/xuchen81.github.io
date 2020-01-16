@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chen Xu - Picture Cross Game</title>
+<style>
+svg {
+    display: block;
+    margin: 0 auto;
+}
+#hint_btn{
+    text-align: center;
+    padding: 10px;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/reverso.min.js"></script>
+</head>
+<body>
+
+<div id="hint_btn">
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#instructions">
+  Show How to Play
+</button>
+</div>
+<div class="collapse" id="instructions">
+  <div class="well">
+    <h4>游戏规则</h4>
+    <p> 每个“翻转棋”游戏开始时，棋盘上已经交叉放好了四颗棋子。其中两颗是黑棋，另两颗是白棋。黑棋总是先走。
+    </p>
+    <p>当您的棋子在某一直线方向包围了对手的棋子时，就可以翻转这些棋子的颜色，使它们成为您方的颜色。例如，如果您执黑棋，并且看到在一排白棋的某一端是一颗黑棋，那么当您将一颗黑棋放在这一排的另一端时，所有的白棋都将翻转并变为黑棋！
+    </p>
+    <p>所有的直线方向均有效：水平、垂直和斜线方向。</p>
+
+    <p>走棋的唯一规则是只能走包围并翻转对手的棋子。每一回合都必须至少翻转一颗对手的棋子。</p>
+    <p>按规则不能再走棋时，这一回合弃权。这一步的行棋权将被交给对方。</p>
+
+    <h4>得分</h4>
+    <p>“翻转棋”的计分方法非常简单。游戏过程中随时都显示黑棋数与白棋数。结束时棋数最多的一方就是赢家。
+</p>
+  </div>
+</div>
+<div id="canvas"></div>
+</body>
+</html>
