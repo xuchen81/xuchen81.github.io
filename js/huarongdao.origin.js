@@ -1,87 +1,132 @@
 $(function() {
     var urlParams = new URLSearchParams(window.location.search);
-    var size = urlParams.get('s') || 6;
+    var level = parseInt(urlParams.get('l')) || 1;
+    var size = 6;
     var n = parseInt(size);
     var boardSize = 750;
     var svgWidth = 1000, svgHight = 1000;
     var emptyColor = "#282c2d";
     var stepSize = 100;
     var svg = d3.select("#canvas").append("svg").attr("width", svgWidth).attr("height", svgHight);
-
     var existRow = 3;
     var blockGap = 10;
     var targetBlockColor = "red";
-    var targetBlock = {
-        sx: 1,
-        sy: 3,
-        width: 2,
-        height: 1,
-        fill: targetBlockColor
-    };
-    var blocks = [
-        {
-            sx: 1,
-            sy: 1,
-            width: 1,
-            height: 2
-        },
-        {
-            sx: 2,
-            sy: 1,
-            width: 2,
-            height: 1
-        },
-        {
-            sx: 3,
-            sy: 2,
-            width: 2,
-            height: 1
-        },
-        {
-            sx: 5,
-            sy: 2,
-            width: 1,
-            height: 2
-        },
-
-        {
-            sx: 3,
-            sy: 3,
-            width: 1,
-            height: 2
-        },
-        {
-            sx: 4,
-            sy: 3,
-            width: 1,
-            height: 3
-        },
-        {
-            sx: 1,
-            sy: 4,
-            width: 2,
-            height: 1
-        },
-        {
-            sx: 5,
-            sy: 4,
-            width: 2,
-            height: 1
-        },
-        {
-            sx: 1,
-            sy: 5,
-            width: 3,
-            height: 1
-        },
-        {
-            sx: 1,
-            sy: 6,
-            width: 3,
-            height: 1
-        },
-        targetBlock
-    ]
+    var allBlocks = [
+        [
+            {sx: 1,sy: 1,width: 1,height: 2},
+            {sx: 2,sy: 1,width: 2,height: 1},
+            {sx: 3,sy: 2,width: 2,height: 1},
+            {sx: 5,sy: 2,width: 1,height: 2},
+            {sx: 3,sy: 3,width: 1,height: 2},
+            {sx: 4,sy: 3,width: 1,height: 3},
+            {sx: 1,sy: 4,width: 2,height: 1},
+            {sx: 5,sy: 4,width: 2,height: 1},
+            {sx: 1,sy: 5,width: 3,height: 1},
+            {sx: 1,sy: 6,width: 3,height: 1},
+            {sx: 1,sy: 3,width: 2,height: 1,fill: targetBlockColor}
+        ],
+        [
+            {sx:1, sy:1, width:1, height:3}, 
+            {sx:2, sy:1, width:1, height:3}, 
+            {sx:3, sy:1, width:1, height:2},
+            {sx:4, sy:1, width:1, height:2},
+            {sx:5, sy:1, width:2, height:1},
+            {sx:3, sy:3, width:2, height:1, fill: targetBlockColor},
+            {sx:5, sy:3, width:1, height:2},
+            {sx:1, sy:4, width:2, height:1},
+            {sx:1, sy:5, width:2, height:1},
+            {sx:1, sy:6, width:2, height:1},
+            {sx:3, sy:6, width:2, height:1},
+            {sx:5, sy:5, width:1, height:2}
+        ],
+        [
+            {sx:1, sy:1, width:2, height:1},
+            {sx:3, sy:1, width:1, height:2},
+            {sx:6, sy:1, width:1, height:3},
+            {sx:1, sy:2, width:1, height:2},
+            {sx:2, sy:2, width:1, height:2},
+            {sx:5, sy:2, width:1, height:2},
+            {sx:3, sy:3, width:2, height:1, fill: targetBlockColor},
+            {sx:1, sy:4, width:1, height:2},
+            {sx:2, sy:4, width:2, height:1},
+            {sx:4, sy:4, width:1, height:2},
+            {sx:5, sy:4, width:2, height:1},
+            {sx:2, sy:5, width:1, height:2},
+            {sx:4, sy:6, width:3, height:1}
+        ],
+        [
+            {sx:1, sy:1, width:3, height:1},
+            {sx:1, sy:2, width:3, height:1},
+            {sx:4, sy:1, width:1, height:2},
+            {sx:5, sy:1, width:1, height:2},
+            {sx:6, sy:1, width:1, height:2},
+            {sx:1, sy:3, width:2, height:1, fill: targetBlockColor},
+            {sx:3, sy:3, width:1, height:2},
+            {sx:6, sy:3, width:1, height:2},
+            {sx:1, sy:4, width:2, height:1},
+            {sx:1, sy:5, width:1, height:2},
+            {sx:3, sy:5, width:1, height:2},
+            {sx:5, sy:5, width:2, height:1}
+        ],
+        [
+            {sx:1, sy:1, width:3, height:1},
+            {sx:4, sy:1, width:1, height:3},
+            {sx:6, sy:1, width:1, height:2},
+            {sx:1, sy:2, width:1, height:2},
+            {sx:2, sy:2, width:2, height:1},
+            {sx:2, sy:3, width:2, height:1, fill: targetBlockColor},
+            {sx:5, sy:3, width:1, height:2},
+            {sx:6, sy:3, width:1, height:2},
+            {sx:1, sy:4, width:2, height:1},
+            {sx:3, sy:4, width:2, height:1},
+            {sx:3, sy:5, width:1, height:2},
+            {sx:4, sy:5, width:3, height:1},
+            {sx:4, sy:6, width:3, height:1}
+        ],
+        [
+            {sx:1, sy:1, width:1, height:3},
+            {sx:2, sy:1, width:1, height:3},
+            {sx:3, sy:1, width:2, height:1},
+            {sx:5, sy:1, width:2, height:1},
+            {sx:3, sy:2, width:2, height:1},
+            {sx:6, sy:2, width:1, height:3},
+            {sx:3, sy:3, width:2, height:1, fill: targetBlockColor},
+            {sx:5, sy:3, width:1, height:2},
+            {sx:2, sy:4, width:2, height:1},
+            {sx:4, sy:4, width:1, height:2},
+            {sx:3, sy:5, width:1, height:2},
+            {sx:5, sy:5, width:2, height:1},
+            {sx:1, sy:6, width:2, height:1}
+        ],
+        [
+            {sx:3, sy:1, width:1, height:2},
+            {sx:4, sy:1, width:3, height:1},
+            {sx:4, sy:2, width:1, height:2},
+            {sx:5, sy:2, width:2, height:1},
+            {sx:2, sy:3, width:2, height:1, fill: targetBlockColor},
+            {sx:2, sy:4, width:1, height:2},
+            {sx:3, sy:4, width:2, height:1},
+            {sx:5, sy:4, width:1, height:3},
+            {sx:3, sy:5, width:2, height:1},
+            {sx:1, sy:6, width:2, height:1},
+            {sx:3, sy:6, width:2, height:1}
+        ],
+        [
+            {sx:1, sy:1, width:1, height:2},
+            {sx:3, sy:1, width:1, height:3},
+            {sx:5, sy:1, width:2, height:1},
+            {sx:5, sy:2, width:1, height:2},
+            {sx:6, sy:2, width:1, height:3},
+            {sx:1, sy:3, width:2, height:1, fill: targetBlockColor},
+            {sx:2, sy:4, width:1, height:2},
+            {sx:3, sy:4, width:3, height:1},
+            {sx:1, sy:5, width:1, height:2},
+            {sx:4, sy:5, width:1, height:2},
+            {sx:5, sy:5, width:2, height:1},
+            {sx:2, sy:6, width:2, height:1}
+        ]
+    ];
+    var blocks = level > allBlocks.length? allBlocks[0]: allBlocks[level-1];
 
     var blockData = blocks.map(function(e) {
         e.direction = e.width > e.height? "x": "y";
