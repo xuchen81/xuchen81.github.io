@@ -1,12 +1,12 @@
 $(function() {
-	var urlParams = new URLSearchParams(window.location.search);
-	var size = urlParams.get('s') || 6;
-	var n = parseInt(size);
-	var boardSize = 750;
-	var svgWidth = 1000, svgHight = 1000;
-	var emptyColor = "#282c2d";
-	var stepSize = 100;
-	var svg = d3.select("#canvas").append("svg").attr("width", svgWidth).attr("height", svgHight);
+    var urlParams = new URLSearchParams(window.location.search);
+    var size = urlParams.get('s') || 6;
+    var n = parseInt(size);
+    var boardSize = 750;
+    var svgWidth = 1000, svgHight = 1000;
+    var emptyColor = "#282c2d";
+    var stepSize = 100;
+    var svg = d3.select("#canvas").append("svg").attr("width", svgWidth).attr("height", svgHight);
 
     var existRow = 3;
     var blockGap = 10;
@@ -88,16 +88,16 @@ $(function() {
         return e;
     });
 
-	var gameBoardStroke = 10;
-	svg.append("rect").attr("x", (svgWidth - boardSize) / 2)
-		.attr("y", gameBoardStroke / 2)
-		.attr("rx", 10)
-		.attr("ry", 10)
-		.attr("width", boardSize)
-		.attr("height", boardSize)
-		.attr('fill', '#9c6017')
-		.attr("stroke-width", gameBoardStroke)
-		.attr("stroke", "#9c6017");
+    var gameBoardStroke = 10;
+    svg.append("rect").attr("x", (svgWidth - boardSize) / 2)
+        .attr("y", gameBoardStroke / 2)
+        .attr("rx", 10)
+        .attr("ry", 10)
+        .attr("width", boardSize)
+        .attr("height", boardSize)
+        .attr('fill', '#9c6017')
+        .attr("stroke-width", gameBoardStroke)
+        .attr("stroke", "#9c6017");
 
     var data = [];
     var idx = 0;
@@ -269,7 +269,7 @@ $(function() {
                 var currX = parseInt(d3.select("#target").attr("x"));
                 d3.select("#target").transition().duration(100).attr("x", currX + 50);
                 setTimeout(function() {
-                    alert("恭喜，你通关了!");
+                    alert("Congrats! You win! 🎉");
                 }, 100);
             }
         }, 500)
@@ -278,6 +278,10 @@ $(function() {
     }
 
     d3.selectAll("rect[class='block']").on("click", function(d) {
+        if (checkComplete()) {
+            alert("You have complete this game! Congrats! 🎉")
+            return;
+        }
         var i = parseInt(d3.select(this).attr("curry")), j = parseInt(d3.select(this).attr("currx"));
 
         if (d.direction === "x") {
