@@ -114,7 +114,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5; 
-  background-color: #c1c1c1; }
+  background-color: #3e3e3e; }
 
 a {
   color: #3273dc;
@@ -7227,10 +7227,10 @@ a:hover, a:focus, a:active {
           background-color: #eee; }
 
 .bg_green, .title_bg .text_bg .text {
-  background: #587A6E; }
+  background: #036f57; }
 
 .bg_grey {
-  background: #D1D2D3; }
+  background: #eceaea; }
 
 .title_bg {
   height: 30px;
