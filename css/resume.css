@@ -3728,3 +3728,7 @@ a:hover, a:focus, a:active {
   padding-right: 50px;
 }
 /*# sourceMappingURL=screen.css.map */
+hr {
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+}
