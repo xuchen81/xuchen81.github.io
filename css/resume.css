@@ -3672,7 +3672,9 @@ a:hover, a:focus, a:active {
           background-color: #eee; }
 
 .bg_green, .title_bg .text_bg .text {
-  background: #036f57; }
+  background: #036f57; 
+  padding: 30px;
+}
 
 .bg_grey {
   background: #eceaea; }
@@ -3715,12 +3717,14 @@ a:hover, a:focus, a:active {
   padding-top: 15px;
 }
 
-.profile {
-  margin-left: 80px;
-}
 .title {
 	font-weight: bolder;
 	font-size: 20px;
 	color: white;
+}
+
+.bg_green {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 /*# sourceMappingURL=screen.css.map */
