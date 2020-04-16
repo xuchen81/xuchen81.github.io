@@ -3909,3 +3909,41 @@ hr {
   font-size: 15px;
   color: #8a8a8a;
 }
+.adv_tag {
+  align-items: center;
+  border-radius: 3px;
+  display: inline-flex;
+  font-size: 0.75rem;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  white-space: nowrap;
+  font-weight: bold;
+  color: white;
+}
+.tag1 {
+  background-color: #faad14;
+}
+.tag2 {
+  background-color: #ff7a45;
+}
+.tag3 {
+  background-color: #b37feb;
+}
+.tag4 {
+  background-color: #40a9ff;
+}
+.tag5 {
+  background-color: #597ef7;
+}
+.tag6 {
+  background-color: #13c2c2;
+}
+.tag7 {
+  background-color: #ff4d4f;
+}
+.tag8 {
+  background-color: #85a5ff;
+}
