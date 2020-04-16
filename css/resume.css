@@ -3903,6 +3903,9 @@ hr {
   font-weight: bold;
 }
 .certs a {
+  color:#4a4a4a;
+}
+.certs span {
   font-size: 15px;
   color: #8a8a8a;
 }
