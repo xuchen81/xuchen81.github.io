@@ -3897,3 +3897,12 @@ hr {
   align-items: center;
   justify-content: center;
 }
+
+#div_title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.certs a {
+  font-size: 15px;
+  color: #8a8a8a;
+}
