@@ -3832,11 +3832,12 @@ a:hover, a:focus, a:active {
 
 .fa {
   margin-right: 10px;
-
 }
-
 .photo {
   padding-top: 15px;
+}
+.photo img {
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
 }
 
 .title {
