@@ -3872,6 +3872,7 @@ hr {
 }
 .news {
   position: relative;
+  background-color: #eceaea;
 }
 .news_link {
   position: absolute;
@@ -3945,4 +3946,10 @@ hr {
   display: inline-block;
   border-radius: 20px;
   box-shadow: 5px 5px 5px #888888;
+}
+.news {
+  border-radius: 5px;
+}
+.news img {
+  border-radius: 5px;
 }
