@@ -3951,4 +3951,6 @@ hr {
   margin-right: 20px;
   vertical-align:middle;
   display: inline-block;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #888888;
 }
