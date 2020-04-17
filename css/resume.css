@@ -3867,20 +3867,11 @@ hr {
   color: black;
   box-shadow: 4px 4px 10px #888888;
 }
-.news_img {
-  width: 106px;
-  height: 54px;
-}
-
 .link {
   margin-right:0px;
 }
 .news {
-  display: block;
   position: relative;
-}
-.news_img {
-  display: block;
 }
 .news_link {
   position: absolute;
