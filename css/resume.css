@@ -3947,3 +3947,8 @@ hr {
 .tag8 {
   background-color: #85a5ff;
 }
+.douyin_image img{
+  margin-right: 20px;
+  vertical-align:middle;
+  display: inline-block;
+}
