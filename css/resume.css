@@ -3952,4 +3952,6 @@ hr {
 }
 .news img {
   border-radius: 5px;
+  height: 54px;
+  min-height: 54px;
 }
