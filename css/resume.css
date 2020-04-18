@@ -3928,7 +3928,6 @@ hr {
   padding-right: 0.75em;
   white-space: nowrap;
   font-weight: bold;
-  color: white;
 }
 .tag1 {
   background-color: #faad14;
@@ -3955,7 +3954,7 @@ hr {
   background-color: #85a5ff;
 }
 .douyin_image img{
-  margin-right: 20px;
+  margin: 8px;
   vertical-align:middle;
   display: inline-block;
   border-radius: 20px;
