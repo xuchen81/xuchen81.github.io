@@ -3916,6 +3916,20 @@ hr {
   font-weight: bold;
   color: white;
 }
+.cg_tag {
+  align-items: center;
+  border-radius: 3px;
+  display: inline-flex;
+  font-size: 0.75rem;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  white-space: nowrap;
+  font-weight: bold;
+  color: white;
+}
 .tag1 {
   background-color: #faad14;
 }
@@ -3954,4 +3968,14 @@ hr {
   border-radius: 5px;
   height: 54px;
   min-height: 54px;
+}
+.ae {
+  background-color: rgb(19,0,47);
+  color: rgb(200,120,255);
+  border: 2px solid rgb(200,120,255);
+}
+.nuke {
+  background-color: black;
+  color: rgb(251,164,12);
+  border: 2px solid rgb(251,164,12);
 }
