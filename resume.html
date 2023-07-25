@@ -12,10 +12,18 @@
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/resume.css">
     <title>Chen's Resume</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        const colors = ['#a01818e0', '#2c9c93', '#263cd7', '#753bbd', '#000000'];
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        $("#bg_color, .title_bg .text_bg .text").css("background-color", colors[randomIndex]);
+      })();
+    </script>
   </head>
   <body>
     <div class="container bg_grey">
-      <div class="bg_green text-color-white fz-20">
+      <div id="bg_color" class="bg_green text-color-white fz-20">
         <div class="columns">
           <div class="column">
             <div class="p-b-20"></div>
