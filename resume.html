@@ -61,19 +61,52 @@
                 Company
               </div>
               <div class="column">
-                Six <a href="https://chat.getsix.co" target="_blank">https://chat.getsix.co</a>
+                Avera Labs <a href="http://averalabs.com/" target="_blank">http://averalabs.com/</a>
               </div>
               <div class="column is-narrow b" style="width: 80px;">
                 Job:
               </div>
               <div class="column">
-                Founding Engineer
+                Head of Engineering
               </div>
               <div class="column is-narrow b" style="width: 80px;">
                 Time:
               </div>
               <div class="column">
-                2022/10 - Present
+                2026/02 - Present
+              </div>
+            </div>
+
+            <div class="columns work_description">
+              <div class="column is-narrow b" style="width: 120px;">
+                Description
+              </div>
+              <div class="column">
+                <p>1. Designed and built a large-scale, two-stage distributed pipeline (Celery + Redis) that generates instruction-tuning data for conversational voice models: stage one produces natural multi-speaker dialogue and speaker personas via an LLM, stage two synthesizes speech with voice-design + voice-cloning TTS across three interchangeable GPU/token backends;</p>
+                <p>2. Engineered a Redis-backed token/lane pool with 1,000+ rotating proxies, per-token rate-limiting and exponential back-off, and resumable partial-failure synthesis (re-generates only the failed utterances), scaling generation to thousands of hours of dialogue audio per day while staying within provider concurrency limits;</p>
+                <p>3. Built an ASR-based automatic quality filter (word-error-rate, length-ratio and per-utterance garble detection) that scores every generated clip and removes bad audio before it enters the training set;</p>
+                <p>4. Built data-ingestion pipelines that pull diverse long-form sources — podcasts (RSS), YouTube channels (yt-dlp), and movies / TV shows — into S3 with metadata, then run speaker diarization and VAD to mine clean, high-quality two-speaker conversation segments for training;</p>
+                <p>5. Built a short-term-memory service that chunks conversations into retrievable episodic memory units for the voice agent, with deduplication and S3-backed recovery.</p>
+              </div>
+            </div>
+
+            <div class="columns skill_set">
+              <div class="column is-narrow b" style="width: 120px;">
+                Skill
+              </div>
+              <div class="column">
+                <span class="tag">Python</span>
+                <span class="tag">Celery</span>
+                <span class="tag">Redis</span>
+                <span class="tag">AWS S3</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">TTS / Voice Cloning</span>
+                <span class="tag">ASR</span>
+                <span class="tag">Speaker Diarization</span>
+                <span class="tag">yt-dlp</span>
+                <span class="tag">Distributed Systems</span>
+                <span class="tag">LLM / Prompt Engineering</span>
+                <span class="tag">Ansible</span>
               </div>
             </div>
 
@@ -117,6 +150,79 @@
                 <span class="tag">Chrome Extension</span>
               </div>
             </div> -->
+
+            <hr/>
+
+            <div class="columns work_info">
+              <div class="column is-narrow b" style="width: 120px;">
+                Company
+              </div>
+              <div class="column">
+                Openmart <a href="http://openmart.com/" target="_blank">http://openmart.com/</a>
+              </div>
+              <div class="column is-narrow b" style="width: 80px;">
+                Job:
+              </div>
+              <div class="column">
+                Head of Engineering (China)
+              </div>
+              <div class="column is-narrow b" style="width: 80px;">
+                Time:
+              </div>
+              <div class="column">
+                2024/10 - Present
+              </div>
+            </div>
+
+            <div class="columns work_description">
+              <div class="column is-narrow b" style="width: 120px;">
+                Description
+              </div>
+              <div class="column">
+                <p>1. Designed and built Openmart's end-to-end AI enrichment platform — multiple enrichment types behind a unified API: finding people / contacts, emails, phone numbers, technology stack, and more;</p>
+                <p>2. Built large-scale crawlers that scrape and structure the full universe of business / merchant data from Google Maps;</p>
+                <p>3. Built an AI prospecting system for Whatnot — mining high-intent potential sellers across Instagram, TikTok and other social platforms, and driving their onboarding onto the Whatnot marketplace.</p>
+              </div>
+            </div>
+
+            <div class="columns skill_set">
+              <div class="column is-narrow b" style="width: 120px;">
+                Skill
+              </div>
+              <div class="column">
+                <span class="tag">Python</span>
+                <span class="tag">Web Scraping</span>
+                <span class="tag">Google Maps</span>
+                <span class="tag">LLM</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">Data Pipelines</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Redis</span>
+              </div>
+            </div>
+
+            <hr/>
+
+            <div class="columns work_info">
+              <div class="column is-narrow b" style="width: 120px;">
+                Company
+              </div>
+              <div class="column">
+                Six <a href="https://chat.getsix.co" target="_blank">https://chat.getsix.co</a>
+              </div>
+              <div class="column is-narrow b" style="width: 80px;">
+                Job:
+              </div>
+              <div class="column">
+                Founding Engineer
+              </div>
+              <div class="column is-narrow b" style="width: 80px;">
+                Time:
+              </div>
+              <div class="column">
+                2022/10 - 2024/10
+              </div>
+            </div>
 
             <div class="columns project_info">
               <div class="column is-narrow b" style="width: 120px;">
