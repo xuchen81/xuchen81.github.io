@@ -247,12 +247,11 @@
                 Description
               </div>
               <div class="column">
-                <p>1. Solely responsible for the design and development of a backend system powering an advanced conversational AI agent that allows users to seamlessly interact via natural language to order food, groceries, and more;</p>
-                <p>2. Conceptualized and implemented an intent universe leveraging custom prompts to accurately interpret user intent classification across multiple domains, including food ordering, grocery searches, order modifications and so on, ensuring high intent recognition accuracy and smooth conversational flow, directly improving user satisfaction and order success rates;</p>
-                <p>3. Engineered complex integrations by reverse-engineering third-party food ordering services (DoorDash), enabling frictionless order placements and real-time tracking through proprietary APIs;</p>
-                <p>4. Spearheaded third-party service account management, optimizing service reliability and ensuring secure communication between the AI agent and external service providers;</p>
-                <p>5. Designed and developed the backend services for the job searching site, implementing the core business logic and functionality;</p>
-                <p>6. Designed and implemented an efficient architecture to handle account synchronization, secure token exchanges, and dynamic order handling through real-time APIs, contributing to a scalable, responsive, and user-friendly service.</p>
+                <p>1. As founding engineer, single-handedly designed and built the backend for the Six App (iOS / Android / Web) conversational AI agent, i.e. the complete agent harness (agent runtime) around the LLM: multi-turn conversation state management, intent routing, tool use and action-execution orchestration, enabling users to complete real-world transactions such as ordering food and groceries purely through natural language;</p>
+                <p>2. Designed and implemented the intent universe and prompt routing layer: defined a structured intent space with custom prompts per domain (food ordering, product search, order modification, etc.), reliably mapping open-ended natural language to executable actions, significantly improving intent recognition accuracy and multi-turn conversational coherence;</p>
+                <p>3. Reverse-engineered the private protocols of third-party ordering services such as DoorDash and wrapped them as agent-callable tool interfaces, closing the loop from order placement to real-time order tracking and giving the agent the ability to execute transactions in the real world;</p>
+                <p>4. Architected a scalable backend that unifies cross-platform account synchronization, secure token exchange and dynamic order lifecycle management, pushing order status to clients in real time via Centrifugo and scaling elastically on Serverless (AWS Lambda) + Hasura;</p>
+                <p>5. Built a distributed job-listing crawler in Golang orchestrated with Airflow, and developed the backend services of the job search platform Jungler from scratch.</p>
               </div>
             </div>
 
